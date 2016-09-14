@@ -7,19 +7,17 @@ function Airport(weather){'use strict';
   };
 
   Airport.prototype.clearForLanding = function(plane) {
-    if (this.isStormy()){
-    throw new Error('cannot land during a storm');
+      console.log('clear for landing');
+    if (this._weather.isStormy()){
+    throw new Error('cannot land during storm');
    }
     this._hangar.push(plane);
   };
 
   Airport.prototype.clearForTakeOff = function(plane) {
-    if (this.isStormy()){
-    throw new Error('cannot takeoff during a storm');
+    console.log('clear for take off');
+    if (this._weather.isStormy()){
+    throw new Error('cannot takeoff during storm');
    }
     this._hangar.pop(plane);
-  };
-
-  Airport.prototype.isStormy = function() {
-    return false;
   };
