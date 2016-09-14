@@ -1,5 +1,3 @@
-
-
 describe('Plane',function(){'use strict';
   var plane;
   var airport;
@@ -19,5 +17,5 @@ describe('Plane',function(){'use strict';
     plane.takeoff();
     expect(airport.clearForTakeOff).toHaveBeenCalled();
   });
-  
+
 });

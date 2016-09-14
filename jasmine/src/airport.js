@@ -7,7 +7,6 @@ function Airport(weather){'use strict';
   };
 
   Airport.prototype.clearForLanding = function(plane) {
-      console.log('clear for landing');
     if (this._weather.isStormy()){
     throw new Error('cannot land during storm');
    }
@@ -15,7 +14,6 @@ function Airport(weather){'use strict';
   };
 
   Airport.prototype.clearForTakeOff = function(plane) {
-    console.log('clear for take off');
     if (this._weather.isStormy()){
     throw new Error('cannot takeoff during storm');
    }
